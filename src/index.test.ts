@@ -7,7 +7,8 @@ describe("Either Monad", () => {
     it("right", () => {
       const num = 10;
       const x: Either<number, number> = right(num);
-      const g = (f: (x: number) => number) => either<number, number, number>(() => 0)(f)(x);
+      const g = (f: (x: number) => number) =>
+        either<number, number, number>(() => 0)(f)(x);
 
       expect(g(f)).toBe(f(num));
     });
@@ -15,7 +16,8 @@ describe("Either Monad", () => {
     it("left", () => {
       const num = 10;
       const x: Either<number, number> = left(num);
-      const g = (f: (x: number) => number) => either<number, number, number>(f)(() => 0)(x);
+      const g = (f: (x: number) => number) =>
+        either<number, number, number>(f)(() => 0)(x);
 
       expect(g(f)).toBe(f(num));
     });
