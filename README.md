@@ -1,2 +1,3 @@
 # either-monad
-Implementation of Either Monad in JS
+
+Implementation of Either Monad in TS.
